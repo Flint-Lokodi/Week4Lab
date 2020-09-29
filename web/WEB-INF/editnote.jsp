@@ -3,7 +3,7 @@
     Created on : Sep 28, 2020, 6:03:23 PM
     Author     : 608787
 --%>
-
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,9 +16,9 @@
         <br>
         <h2>Edit Note</h2>
         <form method="post" action="note">
-            <strong>Title:</strong> <input type="text" name="title"><br>
-            <strong>Contents:</strong><textarea>${contents}</textarea><br>
-            
+            <strong>Title:</strong> <input type="text" name="title" value="${note.title}"><br>
+            <strong>Contents:</strong><textarea>${note.contents}</textarea><br>
+            <input type="submit" value="Save">
         </form>
     </body>
 </html>
